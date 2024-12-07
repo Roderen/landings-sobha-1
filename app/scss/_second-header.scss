@@ -1,0 +1,124 @@
+.second__header {
+  position: fixed;
+  top: -100px;
+  right: 0;
+  width: 100%;
+  padding: 15px 0;
+  background-color: #1e1e1e;
+  z-index: 10;
+  transition: top .5s;
+
+  &.active {
+    top: 0;
+  }
+
+  @include mediaMax(1200px) {
+    top: 0;
+    padding: 20px 0;
+  }
+}
+
+.second__header-wrapper {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mediaMax(1200px) {
+    padding: 0 20px;
+  }
+}
+
+.second__header-logo {
+
+}
+
+.second__header-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  li {
+    a {
+      @include MontserratSans(16px, 400, inherit);
+      color: $white;
+      transition: .3s;
+
+      &.active {
+        color: #c5c5c5;
+      }
+    }
+  }
+
+  @include mediaMax(1200px) {
+    display: none;
+  }
+}
+
+.second__header-phone {
+  &__mobile {
+    display: none;
+
+    @include mediaMax(1200px) {
+      display: block;
+      margin-left: auto;
+      margin-right: 20px;
+    }
+
+    .ct-widget__call-us .ct-widget__button {
+      @include mediaMax(430px) {
+        width: 40px;
+        height: 40px;
+        font-size: 0px;
+        min-height: auto;
+        padding: 0!important;
+        border-radius: 50%;
+      }
+
+      @include mediaMax(375px) {
+        zoom: 0.8;
+      }
+
+      &:before {
+        @include mediaMax(430px) {
+          right: 12px!important;
+        }
+      }
+    }
+  }
+}
+
+.second__header-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  @include mediaMax(1200px) {
+    display: none;
+  }
+}
+
+.second__header-button {
+  background-color: $white;
+  padding: 12px 10px;
+  min-width: 195px;
+  border-radius: 8px;
+  transition: .3s;
+  font-size: 14px;
+
+  &:hover {
+    background-color: $gold;
+    color: $white;
+  }
+}
+
+.second__header-langs {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  a {
+    @include MontserratSans(16px, 400, inherit);
+    color: $white;
+  }
+}

@@ -1,0 +1,170 @@
+.section-location {
+  padding: 135px 0 0;
+}
+
+.location {
+}
+
+.location__title {
+  @include MontserratSans(60px, 700, 72px);
+  color: $black;
+
+  @include mediaMax(561px) {
+    font-size: 50px;
+  }
+
+  @include mediaMax(360px) {
+    font-size: 40px;
+  }
+}
+
+.location__cards {
+  margin-top: -40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+
+  @include mediaMax(769px) {
+    margin-top: 30px;
+    flex-direction: column;
+  }
+
+  @include mediaMax(321px) {
+    margin-top: 10px;
+  }
+}
+
+.location__cards-item {
+  padding: 40px 30px;
+  color: $white;
+  position: relative;
+  border-radius: 20px;
+
+  @include mediaMax(431px) {
+    padding: 30px 20px;
+  }
+
+  &.one {
+    background-color: $gold;
+    width: calc(55% - 60px);
+
+    .title {
+      max-width: 370px;
+
+      @include mediaMax(561px) {
+        max-width: 320px;
+      }
+    }
+
+    .descr {
+      max-width: 370px;
+
+      @include mediaMax(561px) {
+        max-width: 320px;
+      }
+    }
+
+    @include mediaMax(1025px) {
+      width: calc(45% - 60px);
+    }
+
+    @include mediaMax(769px) {
+      width: calc(100% - 60px);
+    }
+
+    @include mediaMax(431px) {
+      width: calc(100% - 40px);
+    }
+  }
+
+  &.two {
+    background-color: #1e1e1e;
+    width: calc(45% - 60px);
+
+    @include mediaMax(1025px) {
+      width: calc(55% - 60px);
+    }
+
+    @include mediaMax(769px) {
+      width: calc(100% - 60px);
+    }
+
+    @include mediaMax(431px) {
+      width: calc(100% - 40px);
+    }
+  }
+
+  .bg {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    @include mediaMax(1025px) {
+      display: none;
+    }
+
+    @include mediaMax(769px) {
+      display: block;
+    }
+
+    @include mediaMax(561px) {
+      width: 180px;
+      height: 270px;
+    }
+
+    @include mediaMax(431px) {
+      display: none;
+    }
+  }
+
+  .title {
+    position: relative;
+    z-index: 2;
+    @include MontserratSans(40px, 700, 48px);
+
+    @include mediaMax(561px) {
+      font-size: 32px;
+    }
+
+    @include mediaMax(431px) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  .descr {
+    position: relative;
+    z-index: 2;
+    @include MontserratSans(16px, 400, 22px);
+
+    p {
+      margin-top: 25px;
+    }
+  }
+
+  button {
+    z-index: 3;
+    padding: 22px 10px;
+    min-width: 330px;
+    background-color: $white;
+    border-radius: 8px;
+    margin-top: 50px;
+
+    @include mediaMax(431px) {
+      width: 100%;
+      min-width: auto;
+    }
+
+    @include mediaMax(321px) {
+      padding: 22px 4px;
+    }
+  }
+}
+
+#map {
+  margin-top: 80px;
+  width: 100%;
+  height: 600px;
+}

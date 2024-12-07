@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.min.css">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+
+  <style>
+      .intro {
+          position: relative;
+      }
+
+      .intro__info-button {
+          text-align: center;
+          font-size: 22px;
+      }
+
+      .intro__right {
+          position: absolute;
+          bottom: 10%;
+          right: 0;
+          max-width: 100%;
+          font-size: 320px;
+          font-weight: 600;
+          opacity: .4;
+          color: #fff;
+          font-family: 'Montserrat', sans-serif;
+          pointer-events: none;
+      }
+
+      .intro__info-descr {
+          font-size: 22px;
+          line-height: 24px;
+          max-width: 280px;
+      }
+
+      @media screen and (max-width: 769px) {
+          .intro__title {
+              font-size: 120px;
+              line-height: 120px;
+              width: auto;
+          }
+      }
+
+      @media screen and (max-width: 561px) {
+          .intro__right {
+              font-size: 240px;
+              opacity: .3;
+          }
+      }
+
+      @media screen and (max-width: 430px) {
+          .intro__info-button {
+              width: calc(100% - 20px);
+              font-size: 20px;
+              padding: 20px 10px;
+          }
+
+          .intro__right {
+              font-size: 170px;
+              text-align: center;
+              bottom: 15%;
+              opacity: .2;
+          }
+
+          .intro__title {
+              font-size: 80px;
+              line-height: 80px;
+          }
+      }
+
+      @media screen and (max-width: 375px) {
+          .intro__right {
+              font-size: 140px;
+          }
+      }
+  </style>
+</head>
+
+<body>
+
+<main class="main">
+  <section class="section-intro">
+    <div class="section-intro-wrapper">
+      <div class="intro">
+        <div class="intro__left">
+          <img src="../images/icons/logo-sobha.png" alt="Sobha RealTV" class="intro__logo" width="125">
+          <h1 class="intro__title">Sobha One</h1>
+          <div class="intro__info">
+            <a href="./" class="intro__info-button all-buttons">На главную</a>
+            <h2 class="intro__info-descr">Извините, но этой страницы не существует.</h2>
+          </div>
+        </div>
+
+        <div class="intro__right">
+          404
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+</body>
+
+</html>

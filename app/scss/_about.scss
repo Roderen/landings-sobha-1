@@ -1,0 +1,160 @@
+.section-about {
+  background-color: #1e1e1e;
+  padding: 105px 0 135px;
+}
+
+.about {
+
+}
+
+.about__descr {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: $white;
+
+  h2 {
+    max-width: 380px;
+    @include MontserratSans(60px, 700, 72px);
+
+    @include mediaMax(768px) {
+      max-width: 100%;
+    }
+
+    @include mediaMax(561px) {
+      font-size: 46px;
+      line-height: 52px;
+    }
+
+    @include mediaMax(376px) {
+      font-size: 42px;
+      line-height: 46px;
+    }
+  }
+
+  p {
+    max-width: 400px;
+    @include MontserratSans(16px, 400, 22px);
+    opacity: .8;
+
+    @include mediaMax(768px) {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  @include mediaMax(768px) {
+    flex-direction: column;
+  }
+}
+
+.about__info {
+  margin-top: 40px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+  @include mediaMax(768px) {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+}
+
+.about__info-card {
+  padding: 30px;
+  border-radius: 20px;
+
+  @include mediaMax(431px) {
+    padding: 30px 20px;
+  }
+
+  h3 {
+    position: relative;
+    @include MontserratSans(40px, 700, 48px);
+    z-index: 1;
+
+    @include mediaMax(431px) {
+      font-size: 34px;
+    }
+  }
+
+  p {
+    margin-top: 20px;
+    @include MontserratSans(16px, 400, 22px);
+    z-index: 1;
+    position: relative;
+    opacity: .8;
+  }
+
+  &.big {
+    width: 58%;
+    margin-right: 30px;
+    background-color: $gold;
+    color: $white;
+
+    button {
+      margin-top: 30px;
+      min-width: 270px;
+      padding: 22px 10px;
+      background-color: $black;
+      color: $white;
+      border-radius: 10px;
+      transition: .3s;
+
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
+
+      @include mediaMax(431px) {
+        width: 100%;
+        min-width: auto;
+      }
+    }
+
+    @include mediaMax(1025px) {
+      width: 50%;
+    }
+
+    @include mediaMax(768px) {
+      width: calc(100% - 60px);
+    }
+
+    @include mediaMax(431px) {
+      width: calc(100% - 40px);
+    }
+  }
+
+  &.small {
+    width: 42%;
+    position: relative;
+    background-color: $white;
+    color: $black;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-image: url('../images/img/about/1.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 75%;
+      height: 100%;
+      border-radius: 20px;
+    }
+
+    @include mediaMax(1025px) {
+      width: 50%;
+    }
+
+    @include mediaMax(768px) {
+      width: calc(100% - 60px);
+      margin-top: 20px;
+    }
+
+    @include mediaMax(431px) {
+      width: calc(100% - 40px);
+    }
+  }
+}

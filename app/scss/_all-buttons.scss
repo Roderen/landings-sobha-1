@@ -1,0 +1,8 @@
+.all-buttons {
+  @include MontserratSans(16px, 700, inherit);
+  background-position: 0 0;
+
+  @include mediaMax(321px) {
+    font-size: 14px;
+  }
+}

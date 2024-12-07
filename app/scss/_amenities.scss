@@ -1,0 +1,250 @@
+.section-amenities {
+  padding: 135px 0;
+  background-color: #1e1e1e;
+
+  @include mediaMax(431px) {
+    padding: 135px 0 80px;
+  }
+}
+
+.amenities {
+  position: relative;
+
+  .parallax {
+    position: absolute;
+    top: 40%;
+    right: 25%;
+    background-image: url('../images/img/logo-s-parallax.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 225px;
+    z-index: 1;
+
+    @include mediaMax(481px) {
+      width: 120px;
+      height: 120px;
+      right: 35%;
+    }
+  }
+}
+
+.amenities__title {
+  max-width: 600px;
+  @include MontserratSans(60px, 700, 72px);
+  color: $white;
+
+  span {
+    color: $gold;
+  }
+
+  @include mediaMax(561px) {
+    font-size: 45px;
+    line-height: 48px;
+  }
+
+  @include mediaMax(431px) {
+    font-size: 40px;
+    width: 65%;
+  }
+}
+
+.amenities__cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  @include mediaMax(769px) {
+    flex-wrap: wrap;
+  }
+
+  @include mediaMax(430px) {
+    gap: 5px;
+  }
+}
+
+.amenities__cards-item {
+  width: 100%;
+  border-radius: 20px;
+  color: $white;
+
+  @include mediaMax(769px) {
+    width: 100%;
+    flex: 0 0 47%;
+  }
+
+  @include mediaMax(376px) {
+    flex: 0 0 48%;
+  }
+
+  .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    .number {
+      @include MontserratSans(16px, 400, 19px);
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1;
+    }
+
+    .title {
+      width: 200px;
+      @include MontserratSans(35px, 700, 42px);
+      position: absolute;
+      left: 20px;
+      top: 20px;
+
+      @include mediaMax(561px) {
+        font-size: 28px;
+        line-height: 32px;
+        left: 15px;
+        top: 15px;
+      }
+
+      @include mediaMax(481px) {
+        top: inherit;
+        bottom: 15px;
+      }
+
+      @include mediaMax(431px) {
+        font-size: 22px;
+        line-height: 26px;
+        width: 150px;
+      }
+    }
+  }
+
+  &.one {
+    max-width: 360px;
+    margin-top: 40px;
+
+    .title {
+      bottom: 20px;
+      top: inherit;
+
+      @include mediaMax(561px) {
+        bottom: 15px;
+      }
+    }
+
+    .content {
+      height: 470px;
+
+      @include mediaMax(561px) {
+        height: 260px;
+      }
+    }
+  }
+
+  &.two {
+    margin-top: 80px;
+    max-width: 360px;
+
+    .content {
+      height: 605px;
+
+      @include mediaMax(561px) {
+        height: 335px;
+      }
+    }
+  }
+
+  &.three {
+    margin-top: -130px;
+    max-width: 360px;
+
+    @include mediaMax(1025px) {
+      margin-top: 0;
+    }
+
+    @include mediaMax(769px) {
+      margin-top: -150px;
+    }
+
+    @include mediaMax(561px) {
+      margin-top: -110px;
+    }
+
+    .content {
+      height: 535px;
+
+      @include mediaMax(561px) {
+        height: 320px;
+      }
+    }
+  }
+}
+
+.amenities__descr {
+  margin-top: 60px;
+  color: $white;
+  @include MontserratSans(16px, 400, 22px);
+
+  @include mediaMax(561px) {
+    font-size: 14px;
+  }
+
+  p {
+
+  }
+
+  div {
+    margin-bottom: 15px;
+    @include MontserratSans(40px, 700, 48px);
+  }
+
+  ul {
+    li {
+    }
+  }
+
+  &-top {
+    @include mediaMax(769px) {
+      display: none;
+    }
+  }
+
+  &-bottom {
+    @include mediaMax(769px) {
+      margin-top: 0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 45%;
+    }
+
+    @include mediaMax(561px) {
+      bottom: -110px;
+      width: 50%;
+    }
+
+    @include mediaMax(431px) {
+      width: 200%;
+      position: unset;
+      margin-top: 30px;
+    }
+  }
+}
+
+.amenities__descr-top__mobile {
+  display: none;
+
+  @include mediaMax(769px) {
+    display: block;
+    margin-top: 30px;
+  }
+
+  &.two {
+    display: none;
+  }
+}

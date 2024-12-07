@@ -1,0 +1,114 @@
+html[lang="ru"] {
+  .header__wrapper {
+    @include mediaMax(1280px) {
+      padding: 0 20px;
+    }
+  }
+
+  .header__button {
+    min-width: 180px;
+  }
+
+  .second__header-button {
+    min-width: 150px;
+  }
+
+  .second__header-wrapper {
+    @include mediaMax(1280px) {
+      padding: 0 20px;
+    }
+  }
+
+  .second__header-list li a {
+    font-size: 14px;
+  }
+
+  .second__header-logo {
+    width: 130px;
+
+    @include mediaMax(769px) {
+      width: 160px;
+    }
+  }
+
+  .section-intro-wrapper {
+    @include mediaMax(1280px) {
+      padding: 0 20px;
+    }
+  }
+
+  .intro__info-descr {
+    max-width: 290px;
+  }
+
+  .units__items-item h3 {
+    @include mediaMax(769px) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  .location__title {
+    @include mediaMax(431px) {
+      font-size: 42px;
+    }
+
+    @include mediaMax(376px) {
+      font-size: 34px;
+    }
+  }
+
+  .appeal__items-item h3 {
+    font-size: 22px;
+  }
+
+  .appeal__title {
+    @include mediaMax(431px) {
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    @include mediaMax(376px) {
+      font-size: 28px;
+    }
+
+    @include mediaMax(321px) {
+      font-size: 26px;
+    }
+  }
+
+  .units__title {
+    @include mediaMax(431px) {
+      font-size: 32px;
+      line-height: 36px;
+    }
+  }
+
+  .section-amenities {
+    padding: 135px 0 230px;
+  }
+
+  .amenities__title {
+    @include mediaMax(561px) {
+      font-size: 51px;
+    }
+
+    @include mediaMax(430px) {
+      width: 100%;
+      font-size: 38px;
+    }
+  }
+
+  .amenities__descr-bottom {
+    @include mediaMax(561px) {
+      bottom: -180px;
+    }
+  }
+
+  .floor__title {
+    @include mediaMax(430px) {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
